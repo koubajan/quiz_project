@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz – Prototyp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Quiz</h1>
+        <p class="subtitle">Otestuj své znalosti z algoritmů a programování</p>
+
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <p>Kvíz obsahuje 5 náhodných otázek.<br>Na každou vybereš jednu odpověď a na konci uvidíš výsledek.</p>
+            <button class="btn btn-primary" onclick="startQuiz()">Spustit kvíz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="question-counter" id="question-counter"></div>
+            <div id="questions-container"></div>
+            <div class="submit-area">
+                <button class="btn btn-primary" id="submit-btn" onclick="submitQuiz()" disabled>
+                    Odeslat odpovědi
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen">
+            <div class="score-card">
+                <div class="score-number" id="score-number">0%</div>
+                <div class="score-label" id="score-label">Správně 0 z 0</div>
+            </div>
+            <div id="results-details"></div>
+            <div style="text-align: center; margin-top: 24px;">
+                <button class="btn btn-primary" onclick="startQuiz()">Zkusit znovu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/quiz.js"></script>
+</body>
+</html>
