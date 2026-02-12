@@ -1,5 +1,5 @@
 @echo off
-set PHP=C:\xampp\php\php.exe
+set PHP=C:\php\php.exe
 
 echo ================================
 echo    Quiz Project - Start
